@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class TextAdventureGame {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Introduction
+        System.out.println("Welcome to the Text Adventure Game!");
+        System.out.println("You find yourself in a mysterious forest. What will you do?");
+
+        // Game Loop
+        boolean running = true;
+        while (running) {
+            // Display options
+            System.out.println("1. Go deeper into the forest");
+            System.out.println("2. Climb a tree to get a better view");
+            System.out.println("3. Build a shelter for the night");
+            System.out.println("4. Quit");
+
+            // Get user choice
+            System.out.print("Enter your choice: ");
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+
+            // Process user choice
+            switch (choice) {
+                case 1:
+                    System.out.println("You venture deeper into the forest...");
+                    // Add your own logic for what happens next
+                    break;
+                case 2:
+                    System.out.println("You climb a tree and see a river nearby...");
+                    // Add your own logic for what happens next
+                    break;
+                case 3:
+                    System.out.println("You build a shelter and rest for the night...");
+                    // Add your own logic for what happens next
+                    break;
+                case 4:
+                    System.out.println("Quitting the game. Goodbye!");
+                    running = false;
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please enter a number between 1 and 4.");
+            }
+
+            // Check for game over condition or continue the game loop
+            // You can add your own logic here to determine when the game ends
+            // For example, reaching a certain point in the story or when the player's health reaches zero.
+        }
+
+        scanner.close();
+    }
+}
